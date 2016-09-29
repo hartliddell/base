@@ -11,11 +11,12 @@ module.exports = {
 	},
     devtool: "source-map",
 	module: {
-        preLoaders: [{
-            test:    /\.js$/,
-            exclude: /node_modules/,
-            loader: 'jscs-loader'
-        }],
+        // Turn off the syntax checker for now
+        // preLoaders: [{
+        //     test:    /\.js$/,
+        //     exclude: /node_modules/,
+        //     loader: 'jscs-loader'
+        // }],
 		loaders: [{
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract('style-loader', [
@@ -28,22 +29,22 @@ module.exports = {
 			exclude: /node_modules/,
 			loader: 'babel',
 			query: {
-				presets: ['es2015']
+				presets: ['react', 'es2015']
 			}
 		}]
 	},
 	plugins: [
 		new ExtractTextPlugin('./dist/[name].css'),
-        new BrowserSyncPlugin({
-            // browse to http://localhost:3000/ during development
-            // host: 'localhost',
-            // port: 3000,
-            // This proxy isn't working. I don't know why.
-            // [http://www.stilldrinking.org/blog_images/code-horror.gif]
-            notify: false,
-            open: false,
-            proxy: 'local.base.com',
-        })
+        // new BrowserSyncPlugin({
+        //     // browse to http://localhost:3000/ during development
+        //     // host: 'localhost',
+        //     // port: 3000,
+        //     // This proxy isn't working. I don't know why.
+        //     // [http://www.stilldrinking.org/blog_images/code-horror.gif]
+        //     notify: false,
+        //     open: false,
+        //     // proxy: 'local.base.com',
+        // })
 	],
 	postcss: [
 		autoprefixer({

@@ -1,3 +1,17 @@
 import './style.scss';
 
-console.log('hello base world');
+import React, { Component } from 'react';
+import ReactDom from 'react-dom';
+import ManageContent from './components/mc';
+
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <ManageContent />
+            </div>
+        )
+    }
+}
+
+ReactDom.render(<App />, document.getElementById('main'));

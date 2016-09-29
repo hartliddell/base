@@ -1,0 +1,13 @@
+@import "./scss/variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $sans-serif;
+}
+
+svg path {
+    fill: $silver;
+}

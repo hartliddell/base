@@ -1,3 +1,7 @@
-body {
-    background: red;
-}
+@import "./scss/variables";
+@import "./scss/base";
+@import "./scss/hamburger";
+@import "./scss/toggle-switch";
+
+// Components
+@import "./scss/mc";
