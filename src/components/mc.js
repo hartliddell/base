@@ -9,6 +9,12 @@ export default class ManageContent extends Component {
         }
     }
 
+    createPreviews(previews) {
+        return previews.map(function(preview, index) {
+            return <Preview key={index} {...preview} />
+        });
+    }
+
     render() {
         return (
             <section className="mc">
@@ -17,8 +23,7 @@ export default class ManageContent extends Component {
                     <a href="#">Add New</a>
                 </header>
                 <main className="mc__content">
-                    <Preview />
-                    <Preview />
+                    {this.createPreviews(this.props.content)}
                 </main>
                 <footer></footer>
             </section>
