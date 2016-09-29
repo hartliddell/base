@@ -1,7 +1,9 @@
 'use strict';
 
+import { Link } from 'react-router';
 import Preview from './preview';
 import React, { Component } from 'react';
+import Header from './header';
 import data from '../../data';
 
 export default class ManageContent extends Component {
@@ -23,7 +25,7 @@ export default class ManageContent extends Component {
             <section className="mc">
                 <header className="mc__header">
                     <h1 className="mc__header__title">{ this.state.pageTitle }</h1>
-                    <a href="#">Add New</a>
+                    <Link to="/content/new">Add New</Link>
                 </header>
                 <main className="mc__content">
                     {this.createPreviews(this.state.content)}
