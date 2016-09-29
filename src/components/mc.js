@@ -1,12 +1,13 @@
 import Preview from './preview';
 import React, { Component } from 'react';
+import data from '../../data';
 
 export default class ManageContent extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            pageTitle: 'Manage Content'
-        }
+        const state = data;
+        state.pageTitle = 'Manage Content';
+        this.state = state;
     }
 
     createPreviews(previews) {
@@ -23,7 +24,7 @@ export default class ManageContent extends Component {
                     <a href="#">Add New</a>
                 </header>
                 <main className="mc__content">
-                    {this.createPreviews(this.props.content)}
+                    {this.createPreviews(this.state.content)}
                 </main>
                 <footer></footer>
             </section>

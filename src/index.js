@@ -1,18 +1,12 @@
+'use strict';
+
 import './style.scss';
 
-import React, { Component } from 'react';
-import ReactDom from 'react-dom';
-import ManageContent from './components/mc';
-import data from '../data';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <ManageContent {...data} />
-            </div>
-        )
-    }
+import React from 'react';
+import ReactDOM from 'react-dom';
+import AppRoutes from './appRoutes';
+
+window.onload = () => {
+    ReactDOM.render(<AppRoutes/>, document.getElementById('main'));
 }
-
-ReactDom.render(<App />, document.getElementById('main'));
