@@ -7,26 +7,21 @@ import data from '../../data';
 export default class ManageContent extends Component {
     constructor(props) {
         super(props);
-        const state = data;
-        state.pageTitle = 'Manage Content';
-        this.state = state;
+        this.state = props.params;
     }
 
-    createPreviews(previews) {
-        return previews.map(function(preview, index) {
-            return <Preview key={index} {...preview} />
-        });
-    }
 
     render() {
         return (
             <section className="mc">
                 <header className="mc__header">
-                    <h1 className="mc__header__title">{ this.state.pageTitle }</h1>
+                    <h1 className="mc__header__title">
+                        { data.content[this.state.id].title }
+                    </h1>
                     <a href="#">Add New</a>
                 </header>
                 <main className="mc__content">
-                    {this.createPreviews(this.state.content)}
+                    Put info here
                 </main>
                 <footer></footer>
             </section>
