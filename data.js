@@ -4,7 +4,7 @@ const data = {
         {
             id: 0,
             title: 'About',
-            active: true,
+            active: false,
             type: types[0]
         },
         {
@@ -16,7 +16,7 @@ const data = {
             {
             id: 2,
             title: 'Kings',
-            active: false,
+            active: true,
             type: types[2]
         }
     ]
